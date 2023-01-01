@@ -1,0 +1,45 @@
+$backgroundLight: #eaeaea;
+$backgroundDark: #292929;
+$mainColor: #6200EE;
+$white: #FFFFFF;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.btn {
+    height: 44px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: $mainColor;
+    color: $white;
+    border: 1px solid transparent;
+    transition: all .3s linear;
+
+    &:hover {
+        transition: all .3s linear;
+        color: $mainColor;
+        background: transparent;
+        border: 1px solid $mainColor;
+
+    }
+}
+
+body.light {
+    background: $backgroundLight;
+    color: $backgroundDark;
+    transition: all .3s linear;
+}
+
+body.dark {
+    background: $backgroundDark;
+    color: $backgroundLight;
+    transition: all .3s linear;
+}
