@@ -6,8 +6,8 @@ import "./styles/index.scss";
 function App() {
   return (
     <>
-      <Header />
       <div className="content">
+        <Header />
         <Main />
         <Settings />
       </div>

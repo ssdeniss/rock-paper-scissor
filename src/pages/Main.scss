@@ -29,4 +29,118 @@
     z-index: 999;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: all .3s linear;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        transition: all .3s linear;
+        opacity: 1;
+        pointer-events: initial;
+    }
+
+    &__content {
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        background: $white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+
+    }
+
+    &__close-icon {
+        width: 20px;
+        height: 20px;
+        stroke: $backgroundDark;
+        transition: all .3s linear;
+
+        &:hover {
+            stroke: $mainColor;
+            transition: all .3s linear;
+        }
+    }
+
+    &__select-title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    &__select-items {
+        display: flex;
+        gap: 20px;
+    }
+
+
+
+    &__select-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background: $mainColor;
+        border: 1px solid transparent;
+        color: $white;
+        cursor: pointer;
+        transition: all .3s linear;
+
+        &:hover {}
+
+        &.active {
+            background: transparent;
+            border: 1px solid $mainColor;
+            transition: all .3s linear;
+
+            svg {
+                transition: all .3s linear;
+                stroke: $mainColor;
+            }
+
+        }
+    }
+
+
+    &__select-icon {
+        width: 40px;
+        height: 40px;
+        fill: transparent;
+        stroke: $white;
+    }
+
+
+}
+
+body.dark {
+    .popup {
+        &__content {
+            background: $backgroundDark;
+        }
+
+        &__close-icon {
+            stroke: $backgroundLight;
+
+            &:hover {
+                stroke: $mainColor;
+                transition: all .3s linear;
+            }
+        }
+    }
 }

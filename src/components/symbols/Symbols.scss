@@ -13,11 +13,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 
         svg {
             stroke: $mainColor;
+            width: 100px;
+            height: 100px;
+            fill: transparent;
         }
+
+    }
+
+    &__title-choice {
+        color: $mainColor;
     }
 
 }
