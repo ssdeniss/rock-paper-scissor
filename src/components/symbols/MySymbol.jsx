@@ -1,7 +1,7 @@
 import React from "react";
 import sprite from "../../assets/icons/sprite.svg";
 
-const MySymbol = ({ choice }) => {
+const MySymbol = ({ choice, userScore }) => {
   return (
     <div className="symbol">
       <h3 className="symbol__title">
@@ -14,6 +14,8 @@ const MySymbol = ({ choice }) => {
           ""
         )}
       </h3>
+      <h3 className="symbol__score">{userScore}</h3>
+
       <div className="symbol__content">
         <svg className="symbol__content-icon">
           <use href={sprite + `#${choice}`}></use>

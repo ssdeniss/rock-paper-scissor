@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sprite from "../assets/icons/sprite.svg";
 import { useClickOutside } from "../hooks/useClickOutside";
 
@@ -8,6 +8,9 @@ const MainPopup = ({ popup, setPopup, setChoice, choice }) => {
     setPopup(false);
     document.body.style.overflow = "auto";
   });
+  useEffect(() => {
+    setPopup(false);
+  }, [choice]);
   return (
     <div className={`popup ${popup ? "active" : ""}`}>
       <div className="popup__content" ref={outside}>

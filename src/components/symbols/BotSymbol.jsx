@@ -1,13 +1,13 @@
 import React from "react";
 import sprite from "../../assets/icons/sprite.svg";
 
-const BotSymbol = ({ randomSymbol }) => {
+const BotSymbol = ({ randomSymbol, botScore }) => {
   const choiceArray = ["rock", "paper", "scissor"];
   return (
     <div className="symbol">
       <h3 className="symbol__title">
         Bot choice
-        {choiceArray ? (
+        {randomSymbol ? (
           <>
             :{" "}
             <span className="symbol__title-choice">
@@ -18,6 +18,7 @@ const BotSymbol = ({ randomSymbol }) => {
           ""
         )}
       </h3>
+      <h3 className="symbol__score"> {botScore}</h3>
       <div className="symbol__content">
         {choiceArray && (
           <svg className="popup__select-icon">

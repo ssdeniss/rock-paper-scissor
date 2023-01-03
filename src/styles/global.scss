@@ -42,4 +42,8 @@ body.dark {
     background: $backgroundDark;
     color: $backgroundLight;
     transition: all .3s linear;
+
+    .btn:hover {
+        color: $backgroundLight;
+    }
 }

@@ -27,5 +27,11 @@
     &__title-choice {
         color: $mainColor;
     }
+    &__score{
+        font-size: 20px;
+        color: $mainColor;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
 }
